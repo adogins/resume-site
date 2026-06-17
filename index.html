@@ -321,7 +321,7 @@
     </section>
 
 
-    <!-- CONTACT -->
+  <!-- CONTACT -->
   <section id="contact" class="max-w-5xl mx-auto px-4 py-16">
     <div class="bg-white dark:bg-darkcard p-8 rounded-xl shadow-lg border-l-4 border-primary dark:border-accent transition-base">
       <h2 class="text-3xl font-bold mb-4 text-primary dark:text-accent transition-base">Contact</h2>
@@ -330,7 +330,7 @@
         Feel free to reach out.
       </p>
 
-      <p id="emailDisplay2" class="text-lg text-primary dark:text-accent font-semibold transition-base"></p>
+      <p id="emailDisplay" class="text-lg text-primary dark:text-accent font-semibold transition-base"></p>
 
       <ul class="space-y-2 mt-4">
         <li> 
@@ -372,6 +372,8 @@
     });
   </script>
 
+  <script src="email.js"></script>
+
   <!-- EMAIL INJECTION -->
   <script>
 
@@ -381,13 +383,11 @@
     if (injectedEmail) {
       const emailHTML = `<a href="mailto:${injectedEmail}" class="hover:underline">${injectedEmail}</a>`;
       document.getElementById("emailDisplay").innerHTML = emailHTML;
-      document.getElementById("emailDisplay2").innerHTML = emailHTML;
     } else {
       // Fallback for local testing only
       const fallback = "example@example.com";
       const emailHTML = `<a href="mailto:${fallback}" class="hover:underline">${fallback}</a>`;
       document.getElementById("emailDisplay").innerHTML = emailHTML;
-      document.getElementById("emailDisplay2").innerHTML = emailHTML;
     }
   </script>
 
